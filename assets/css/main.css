@@ -74,7 +74,7 @@ a {
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h1,
@@ -85,6 +85,15 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+.text-justify {
+  text-align: justify; /* 左右對齊 */
+  text-justify: inter-word; /* 單詞間距調整 */
+  line-height: 1.8; /* 行距 */
+  padding-right: 3rem; /* 增加右內邊距 */
+  hyphens: auto;          /* 自動斷字 */
+  overflow-wrap: break-word; /* 遇到長單詞自動換行 */
 }
 
 /* PHP Email Form Messages
