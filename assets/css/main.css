@@ -150,9 +150,9 @@
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
   .theme-toggle {
-    top: 15px;
-    left: 65px; /* Move to left side, next to the mobile nav toggle */
-    right: auto;
+    top: 65px; /* Move below the header toggle */
+    right: 15px;
+    left: auto;
     width: 40px;
     height: 40px;
   }
