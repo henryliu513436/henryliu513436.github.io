@@ -743,6 +743,12 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+/* Make content vertically centered alongside the image */
+.about .row {
+  display: flex;
+  align-items: center;
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
