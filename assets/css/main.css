@@ -203,7 +203,8 @@ h6 {
   text-align: justify; /* 左右對齊 */
   text-justify: inter-word; /* 單詞間距調整 */
   line-height: 1.8; /* 行距 */
-  padding-right: 3rem; /* 增加右內邊距 */
+  max-width: 600px;       /* 限制最大寬度讓文字較易閱讀 */
+  margin: 0 auto 24px auto; /* 居中且增加下方間距 */
   hyphens: auto;          /* 自動斷字 */
   overflow-wrap: break-word; /* 遇到長單詞自動換行 */
 }
