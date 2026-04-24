@@ -18,13 +18,30 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --theme-toggle-bg: #e0e0e0; /* Background color for theme toggle button in light mode */
+  --theme-toggle-color: #333; /* Color for theme toggle button icon in light mode */
+}
+
+/* Dark mode variables */
+.theme-dark {
+  --background-color: #0a0f1a;
+  --default-color: #d0d8e0;
+  --heading-color: #f0f4ff;
+  --surface-color: #1e2b3d;
+  --contrast-color: #ffffff;
+  --theme-toggle-bg: #333;
+  --theme-toggle-color: #f0f4ff;
+  --accent-color: #5d9cec;
+  --nav-color: #7a8aa0;
+  --nav-dropdown-background-color: #0a0f1a;
+  --nav-dropdown-color: #7a8aa0;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -44,6 +61,11 @@
   --surface-color: #ffffff;
 }
 
+.theme-dark .light-background {
+  --background-color: #161e2d;
+  --surface-color: #1e2b3d;
+}
+
 .dark-background {
   --background-color: #040b14;
   --default-color: #ffffff;
@@ -55,6 +77,95 @@
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px; /* Adjusted to top-right corner */
+  z-index: 99999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: var(--theme-toggle-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Sun/Moon icon container */
+.theme-toggle .theme-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Moon SVG (shows in dark mode - indicates switch to light) */
+.theme-toggle .moon-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--theme-toggle-color);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Sun SVG (shows in light mode - indicates switch to dark) */
+.theme-toggle .sun-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--theme-toggle-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Dark mode: show moon, hide sun */
+.theme-dark .theme-toggle .moon-svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.theme-dark .theme-toggle .sun-svg {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  .theme-toggle .theme-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Smooth transition for all color variables */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
 }
 
 /*--------------------------------------------------------------

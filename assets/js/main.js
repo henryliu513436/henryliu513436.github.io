@@ -10,6 +10,32 @@
   "use strict";
 
   /**
+   * Theme toggle
+   */
+  const themeToggleBtn = document.querySelector('#themeToggle');
+
+  function toggleTheme() {
+    document.body.classList.toggle('theme-dark');
+
+    // Store theme preference
+    if (document.body.classList.contains('theme-dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+
+    // Restore theme from localStorage on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('theme-dark');
+    }
+  }
+
+  /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
