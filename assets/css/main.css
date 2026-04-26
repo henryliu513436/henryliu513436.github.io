@@ -939,7 +939,7 @@ section,
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   width: 50%;
 }
 
@@ -973,11 +973,9 @@ section,
 
 .resume .timeline-item.timeline-left .timeline-date {
   position: absolute;
-  bottom: 100%;
-  right: -6px;
-  transform: translateX(50%);
-  text-align: center;
-  padding-bottom: 8px;
+  top: -28px;
+  right: 0;
+  text-align: right;
   color: var(--accent-color);
   font-weight: 600;
   font-size: 14px;
@@ -985,7 +983,7 @@ section,
 }
 
 .resume .timeline-item.timeline-left .timeline-card {
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 /* Right side items */
@@ -1013,11 +1011,9 @@ section,
 
 .resume .timeline-item.timeline-right .timeline-date {
   position: absolute;
-  bottom: 100%;
-  left: -6px;
-  transform: translateX(-50%);
-  text-align: center;
-  padding-bottom: 8px;
+  top: -28px;
+  left: 0;
+  text-align: left;
   color: var(--accent-color);
   font-weight: 600;
   font-size: 14px;
@@ -1025,7 +1021,7 @@ section,
 }
 
 .resume .timeline-item.timeline-right .timeline-card {
-  margin-left: 20px;
+  margin-left: 100px;
 }
 
 /* Timeline Card Styles */
@@ -1033,11 +1029,13 @@ section,
   background: var(--surface-color);
   border-radius: 12px;
   padding: 20px;
+  padding-top: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   max-width: 320px;
   cursor: pointer;
+  position: relative;
 }
 
 .resume .timeline-card:hover {
@@ -1126,6 +1124,7 @@ section,
     white-space: normal !important;
     transform: none !important;
     left: 0 !important;
+    top: auto !important;
   }
 
   .resume .timeline-item .timeline-card {
