@@ -1111,26 +1111,27 @@ section,
   }
 
   .resume .timeline-item .timeline-point-wrapper {
-    left: 0px !important;
+    left: -26px !important;
     right: auto !important;
   }
 
   .resume .timeline-item .timeline-date {
     position: absolute !important;
-    text-align: left !important;
-    padding-left: 15px !important;
-    padding-right: 0 !important;
-    margin-bottom: 10px;
-    white-space: normal !important;
-    transform: none !important;
+    top: -28px !important;
     left: 0 !important;
-    top: auto !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    white-space: nowrap !important;
+    transform: none !important;
   }
 
   .resume .timeline-item .timeline-card {
     margin-left: 0 !important;
     margin-right: 0 !important;
     max-width: none;
+    position: relative;
   }
 }
 
