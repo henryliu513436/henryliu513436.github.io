@@ -1116,7 +1116,7 @@ section,
   }
 
   .resume .timeline-item .timeline-date {
-    position: static !important;
+    position: absolute !important;
     text-align: left !important;
     padding-left: 15px !important;
     padding-right: 0 !important;
