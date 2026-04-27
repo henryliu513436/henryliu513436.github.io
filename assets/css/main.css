@@ -1098,8 +1098,14 @@ section,
 
 /* Responsive styles for timeline */
 @media (max-width: 768px) {
+  .resume .timeline-container {
+    padding-top: 60px; /* Add space at top for extended timeline */
+  }
+
   .resume .timeline-line {
     left: 20px;
+    top: 0; /* Start from the top of the container */
+    height: calc(100% - 60px); /* Adjust height to account for padding-top */
   }
 
   .resume .timeline-item {
@@ -1111,13 +1117,13 @@ section,
   }
 
   .resume .timeline-item .timeline-point-wrapper {
-    left: -10px !important;
+    left: 0 !important; /* Align point exactly on the timeline (20px + 30px padding offset = 50px from container edge) */
     right: auto !important;
   }
 
   .resume .timeline-item .timeline-date {
     position: absolute !important;
-    top: -28px !important;
+    top: -45px !important; /* Move date higher above card */
     left: 0 !important;
     text-align: left !important;
     padding-left: 0 !important;
